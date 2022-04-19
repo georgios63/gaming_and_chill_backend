@@ -13,6 +13,19 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/:input", async (req, res) => {
+  try {
+    const input = req.params.input;
+    const response = await axios.get(
+      `https://www.mmobomb.com/api1/games?sort-by=${input}`
+    );
+
+    res.status(200).send(response.data);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 router.get("/:id", async (req, res) => {
   try {
     const id = req.params.id;
