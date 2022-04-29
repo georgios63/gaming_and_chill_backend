@@ -59,3 +59,5 @@ app.post("/authorized_post_request", authMiddleWare, (req, res) => {
 app.listen(PORT, () => {
   console.log(`Listening on port: ${PORT}`);
 });
+
+// Always push in github then push on heroku git push heroku master
