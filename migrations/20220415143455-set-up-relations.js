@@ -11,7 +11,7 @@ module.exports = {
       onDelete: "SET NULL",
     });
 
-    await queryInterface.addColumn("libraries", "userId", {
+    await queryInterface.addColumn("games", "userId", {
       type: Sequelize.INTEGER,
       references: {
         model: "users",
@@ -34,7 +34,7 @@ module.exports = {
 
   async down(queryInterface, Sequelize) {
     await queryInterface.removeColumn("likes", "userId");
-    await queryInterface.removeColumn("libraries", "userId");
+    await queryInterface.removeColumn("games", "userId");
     await queryInterface.removeColumn("comments", "userId");
   },
 };
