@@ -21,6 +21,7 @@
   "author": "Rein Op 't Land",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.19.2",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -30,7 +31,6 @@
     "sequelize-cli": "^6.2.0"
   },
   "devDependencies": {
-    "axios": "^0.19.2",
     "nodemon": "^2.0.13"
   }
 }
